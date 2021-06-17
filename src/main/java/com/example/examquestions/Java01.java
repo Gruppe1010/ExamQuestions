@@ -3,34 +3,13 @@ package com.example.examquestions;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.valueOf;
+
 public class Java01 {
 
     public static void main(String[] args) {
 
-        s5();
 
-
-
-
-
-
-    }
-
-
-
-    public static void s5(){
-
-        List<Integer> lst = new ArrayList<>();
-
-        lst.add(1);
-
-        for (Integer ii: lst) {
-
-            System.out.println(ii.getClass().getName());
-
-        }
-
-    }
 
 /*
 Java01. Eriks exam like questions.
@@ -38,12 +17,32 @@ Java01. Eriks exam like questions.
 ------------------------------------------------------
 S1. Why is Java not considered a pure objectoriented language.
 
++ fordi der findes funktioner fra funktionel programmering i java - fx lambda expressions
+
 ------------------------------------------------------
 S2. Can a primitive have the value null ?
++ primite datatyper kan IKKE være null
 
 ------------------------------------------------------
 S3. For all primitives, java has wrapper classes.
-  Are values in wrapper classes immutable ?
+  Are values in wrapper classes immutable (immutable = man kan ikke ændre objektets værdi) ?
+  + man bruger final til at lave noget immutable
+*/
+    Integer imTest = valueOf(4);
+
+    System.out.println(imTest);
+
+    imTest = 6;
+
+    int i = 9;
+
+    i++;
+
+    System.out.println(i);
+
+
+
+/*
 
 ------------------------------------------------------
 S4.
@@ -217,7 +216,7 @@ public class Student {
 S34. How do you call a Super Class Constructor from a Constructor ?
 
     public Student(String name) {
-    	super();
+        super();
         this.name = name;
     }
 
@@ -314,4 +313,41 @@ public final class MyStaticClass {
 
 
 
+
+        s5();
+
+
+
+
+
+
+    }
+
+
+
+    public static void s5(){
+
+        List<Integer> lst = new ArrayList<>();
+
+        lst.add(1);
+
+        for (Integer ii: lst) {
+
+            System.out.println(ii.getClass().getName());
+
+        }
+
+    }
+
+
+
+
+
+
+
+
 }
+
+
+
+
